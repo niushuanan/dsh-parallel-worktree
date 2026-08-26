@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "kind": "xiaozhuang-dsh-plugin-export",
+  "createdAt": "2026-08-26T11:46:43.508Z",
+  "sourceCommit": "49b1c5207b1556515752c6bf9e7902c1a5964ad9",
+  "plugins": [
+    {
+      "id": "parallel-development",
+      "name": "并发 worktree 协作",
+      "rows": [
+        {
+          "id": "parallel-development",
+          "name": "@deepseek-ai/dsh-parallel-development"
+        }
+      ],
+      "sources": [
+        {
+          "kind": "profile",
+          "path": "parallel-development"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "path": "payload/parallel-development/profile/parallel-development/lib/index.js",
+      "size": 27179,
+      "sha256": "8fc85c85b44dd82062310fd37f18b62b08cb2261232c6ca6a603e713880750a4"
+    },
+    {
+      "path": "payload/parallel-development/profile/parallel-development/package.json",
+      "size": 318,
+      "sha256": "8a332444de392ca85c73a1b20c50039ea5d051e51e73b494c22fe3a03847ce09"
+    }
+  ],
+  "excludes": [
+    "node_modules",
+    "Git metadata",
+    "tests",
+    "caches",
+    "credentials",
+    "sessions",
+    "conversation history",
+    "user settings"
+  ],
+  "repository": "https://github.com/niushuanan/dsh-parallel-worktree",
+  "releaseTag": "xiaozhuang-v0.4.2",
+  "sourceRepository": "https://github.com/niushuanan/xiaozhuang-dsh"
+}
