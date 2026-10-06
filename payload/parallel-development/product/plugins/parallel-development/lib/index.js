@@ -36,8 +36,11 @@ const REVIEW_SCHEMA = {
 
 function isTeamwork(session) {
   if (session == null) return false
-  for (let index = session.events.length - 1; index >= 0; index -= 1) {
-    const event = session.events[index]
+  const events = typeof session.snapshotEvents === 'function'
+    ? session.snapshotEvents()
+    : session.events ?? []
+  for (let index = events.length - 1; index >= 0; index -= 1) {
+    const event = events[index]
     if (event?.type === 'teamwork/state' && typeof event.data?.active === 'boolean') return event.data.active
   }
   return false

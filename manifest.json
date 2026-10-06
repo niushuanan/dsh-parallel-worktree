@@ -1,8 +1,12 @@
 {
   "schemaVersion": 1,
   "kind": "xiaozhuang-dsh-plugin-export",
-  "createdAt": "2026-08-26T11:46:43.508Z",
-  "sourceCommit": "49b1c5207b1556515752c6bf9e7902c1a5964ad9",
+  "createdAt": "2026-10-06T18:35:53.732129+00:00",
+  "sourceCommit": "efbbbc6a1977cf4559bf306221533eb16393664c",
+  "sourceRepository": "https://github.com/niushuanan/xiaozhuang-dsh",
+  "repository": "https://github.com/niushuanan/dsh-parallel-worktree",
+  "targetHarness": "0.2.1-alpha.1",
+  "upgradeWorkflow": "https://github.com/oh-my-dsh/dsh-plugin-upgrade-skill/",
   "plugins": [
     {
       "id": "parallel-development",
@@ -10,40 +14,78 @@
       "rows": [
         {
           "id": "parallel-development",
-          "name": "@deepseek-ai/dsh-parallel-development"
+          "name": "./lib/index.js"
         }
       ],
       "sources": [
         {
-          "kind": "profile",
-          "path": "parallel-development"
+          "kind": "product",
+          "path": "plugins/parallel-development"
         }
-      ]
+      ],
+      "version": "1.1.0"
     }
   ],
   "files": [
     {
-      "path": "payload/parallel-development/profile/parallel-development/lib/index.js",
-      "size": 27179,
-      "sha256": "8fc85c85b44dd82062310fd37f18b62b08cb2261232c6ca6a603e713880750a4"
+      "path": "payload/parallel-development/product/plugins/parallel-development/cordis.patch.yml",
+      "size": 68,
+      "sha256": "aeb1f52ef6b8bee5c2e47bc160113fa7831d321e7372baed5fe5266ef45dcfb1"
     },
     {
-      "path": "payload/parallel-development/profile/parallel-development/package.json",
-      "size": 318,
-      "sha256": "8a332444de392ca85c73a1b20c50039ea5d051e51e73b494c22fe3a03847ce09"
+      "path": "payload/parallel-development/product/plugins/parallel-development/lib/index.js",
+      "size": 27283,
+      "sha256": "ff157e7977bbc1a7f2f93f665911dd78f8599622911851083c0a7bb7f90a9398"
+    },
+    {
+      "path": "payload/parallel-development/product/plugins/parallel-development/package.json",
+      "size": 638,
+      "sha256": "cad2f430455d9614a216c5834a2f0aec806d5eeb489ca515299882c3af1e05f0"
+    },
+    {
+      "path": "payload/parallel-development/product/plugins/parallel-development/scripts/build.mjs",
+      "size": 243,
+      "sha256": "9011bdbc4a3b54acb070bdd3f5a1cb86dfa2674054b303192efbd8a8fd0f768b"
+    },
+    {
+      "path": "payload/parallel-development/product/plugins/parallel-development/src/index.js",
+      "size": 27283,
+      "sha256": "ff157e7977bbc1a7f2f93f665911dd78f8599622911851083c0a7bb7f90a9398"
+    },
+    {
+      "path": "payload/shared/deliverable-file-path.patch",
+      "size": 2379,
+      "sha256": "65120b70cad2e196a4bee54911eced508f45818dc7dac1f1d7fd4a9de1ff3c73"
+    },
+    {
+      "path": "payload/shared/native-plugin-loading.patch",
+      "size": 23851,
+      "sha256": "136f4832023c8422906bbd86ede896ecb26d066931abf59db6fe2d094d4f2325"
+    },
+    {
+      "path": "payload/shared/session-state-compatibility.patch",
+      "size": 19961,
+      "sha256": "58bc1b86e2a347d0e29477877f96190379b04dc07bb3f37bd7f0f37fc3a3fef2"
+    },
+    {
+      "path": "payload/shared/settings-and-ui-slots.patch",
+      "size": 73183,
+      "sha256": "ce217a393adba9a3c3d1692ea14868a7d8f3d4e936a3895c216ae1f7d136a176"
     }
+  ],
+  "compatibilityPatches": [
+    "payload/shared/native-plugin-loading.patch",
+    "payload/shared/settings-and-ui-slots.patch",
+    "payload/shared/session-state-compatibility.patch",
+    "payload/shared/deliverable-file-path.patch"
   ],
   "excludes": [
     "node_modules",
-    "Git metadata",
-    "tests",
-    "caches",
     "credentials",
     "sessions",
-    "conversation history",
-    "user settings"
-  ],
-  "repository": "https://github.com/niushuanan/dsh-parallel-worktree",
-  "releaseTag": "xiaozhuang-v0.4.2",
-  "sourceRepository": "https://github.com/niushuanan/xiaozhuang-dsh"
+    "attachments",
+    "user settings",
+    "caches",
+    "test outputs"
+  ]
 }
